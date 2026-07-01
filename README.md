@@ -59,15 +59,16 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 5. Keep the system reliable, low-power, and cheap enough to scale to real households — not just labs.
 
 ---
-## Features
-✅ Real-time Gas Detection
-✅ Real-time Fire Detection
-✅ LCD Alerts
-✅ SMS Notification
-✅ Cloud Dashboard
-✅ Historical Data Logging
-✅ Low Cost
-✅ Easy Installation
+## ✨ Features
+
+- ✅ Real-time Gas Detection
+- ✅ Real-time Fire Detection
+- ✅ LCD Alerts
+- ✅ SMS Notification
+- ✅ Cloud Dashboard
+- ✅ Historical Data Logging
+- ✅ Low Cost
+- ✅ Easy Installation
 
 ---
 **Tech Stack**
