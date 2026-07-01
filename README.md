@@ -32,6 +32,8 @@ Traditional gas and fire detectors are stuck in one room, shouting into an empty
 
 This system fixes that. It fuses local sensing with **GSM SMS alerts** and **ThingSpeak cloud logging**, so a gas leak or flame gets caught and reported — instantly — whether you're in the next room or on the other side of the city.
 
+--
+
 ## 🎯 Problem Statement
 
 Gas leaks and fire outbreaks remain among the most preventable causes of property damage and loss of life — yet the detection systems most homes and small businesses rely on haven't evolved much. Most existing setups fall into one of two categories:
@@ -46,6 +48,8 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 - ❌ **High cost of entry** — cloud-connected industrial systems price out individual households and small businesses.
 - ❌ **Delayed response** — without instant notification, response times increase, giving fires and leaks more time to escalate.
 
+--
+
 **Objectives of this project:**
 
 1. Design and implement an IoT-based system capable of detecting hazardous gases (LPG, methane) and open flame.
@@ -53,6 +57,40 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 3. Send immediate SMS notifications to users the moment a hazardous condition is detected.
 4. Push live sensor data to ThingSpeak for remote visualization and historical tracking.
 5. Keep the system reliable, low-power, and cheap enough to scale to real households — not just labs.
+
+--
+## Features
+✅ Real-time Gas Detection
+✅ Real-time Fire Detection
+✅ LCD Alerts
+✅ SMS Notification
+✅ Cloud Dashboard
+✅ Historical Data Logging
+✅ Low Cost
+✅ Easy Installation
+
+--
+**Tech Stack**
+Microcontroller:
+- Arduino UNO
+- ESP32
+
+Sensors:
+- MQ5
+- Flame Sensor
+
+Communication:
+- GSM
+- UART
+- WiFi
+
+Cloud:
+- ThingSpeak
+
+Programming:
+- Arduino C++
+
+--
 
 ## ⚙️ How it works
 
@@ -65,16 +103,21 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 4. The ESP32 hops on WiFi and pushes the data to **ThingSpeak**, powering a live remote dashboard.
 
 ```
-[MQ-5 Gas Sensor]  [Flame Sensor]
-        \\              /
-           [ Arduino ]
-        /       |        \\
- [Buzzer/LED] [LCD]  [GSM Module] --> 📱 SMS Alert
-        |
-   (serial link)
-        |
-   [ ESP32 ] --> WiFi --> ☁️ ThingSpeak Cloud Dashboard
+MQ5        Flame Sensor
+   \         /
+    Arduino UNO
+   / |   |   \
+LCD GSM Buzzer LEDs
+      |
+   Serial UART
+      |
+    ESP32
+      |
+     WiFi
+      |
+ ThingSpeak Cloud
 ```
+--
 
 ## 🧰 Hardware & Software
 
@@ -121,6 +164,7 @@ src/
 ├── esp32code.ino         # reads data from Arduino, uploads to ThingSpeak
 └── secrets.h.example     # template — copy to secrets.h and fill in your own values
 ```
+--
 
 ## 🛠️ Setup
 
@@ -131,6 +175,8 @@ src/
 5. **Power on** both boards. Once the ESP32 connects to WiFi, live data appears on your ThingSpeak channel dashboard. ✅
 
 > 💡 **Tip:** the Arduino IDE normally expects each `.ino` file to live in its own folder matching the sketch name. Since `arduino_code.ino` and `esp32code.ino` sit together in `src/`, open each file directly via **File → Open** (rather than double-clicking from a file browser) so it doesn't try to create a matching folder for you.
+
+--
 
 ## 📊 Results
 
@@ -145,6 +191,7 @@ src/
 - SMS alerts landed in real time the moment a hazard was detected.
 - Sensor data stayed visible remotely on ThingSpeak from any smartphone or PC.
 
+--
 ## 🖼️ Gallery
 
 | Normal State | Gas Detected | Fire Detected |
@@ -155,6 +202,7 @@ src/
 |:---:|:---:|:---:|
 | ![Connections](images/connections.png) | ![SMS](images/sms-alert.jpg) | ![ThingSpeak](images/ThingSpeak-normal.jpg) |
 
+--
 ## 🔮 Future scope
 
 - 💨 Automatic ventilation / fire suppression — exhaust fans, gas valves, sprinklers
@@ -163,7 +211,7 @@ src/
 - 🧪 Multi-sensor fusion (temperature, smoke, humidity, CO/CO₂) to cut false alarms
 - 🏢 Centralized monitoring dashboard for multiple units across a building or facility
 - ☁️ Long-term cloud data storage for trend analysis and reporting
-
+--
 ## 👥 Team
 
 - Akshata Chettiar
@@ -171,10 +219,9 @@ src/
 - Pavitra Boga
 - Anoushka Rajesh
 
----
+--
 
 ## 📜 License
-
 Academic mini-project — feel free to reference for learning purposes.
 
 <p align="center">Made with 🔧, ☁️, and a healthy fear of gas leaks.</p>
