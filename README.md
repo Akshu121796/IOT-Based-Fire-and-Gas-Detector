@@ -32,7 +32,7 @@ Traditional gas and fire detectors are stuck in one room, shouting into an empty
 
 This system fixes that. It fuses local sensing with **GSM SMS alerts** and **ThingSpeak cloud logging**, so a gas leak or flame gets caught and reported — instantly — whether you're in the next room or on the other side of the city.
 
---
+---
 
 ## 🎯 Problem Statement
 
@@ -48,7 +48,7 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 - ❌ **High cost of entry** — cloud-connected industrial systems price out individual households and small businesses.
 - ❌ **Delayed response** — without instant notification, response times increase, giving fires and leaks more time to escalate.
 
---
+---
 
 **Objectives of this project:**
 
@@ -58,7 +58,7 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 4. Push live sensor data to ThingSpeak for remote visualization and historical tracking.
 5. Keep the system reliable, low-power, and cheap enough to scale to real households — not just labs.
 
---
+---
 ## Features
 ✅ Real-time Gas Detection
 ✅ Real-time Fire Detection
@@ -69,7 +69,7 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 ✅ Low Cost
 ✅ Easy Installation
 
---
+---
 **Tech Stack**
 Microcontroller:
 - Arduino UNO
@@ -90,7 +90,7 @@ Cloud:
 Programming:
 - Arduino C++
 
---
+---
 
 ## ⚙️ How it works
 
@@ -117,7 +117,7 @@ LCD GSM Buzzer LEDs
       |
  ThingSpeak Cloud
 ```
---
+---
 
 ## 🧰 Hardware & Software
 
@@ -147,6 +147,7 @@ LCD GSM Buzzer LEDs
 </tr>
 </table>
 
+---
 ## 📂 Repository structure
 
 ```
@@ -164,7 +165,7 @@ src/
 ├── esp32code.ino         # reads data from Arduino, uploads to ThingSpeak
 └── secrets.h.example     # template — copy to secrets.h and fill in your own values
 ```
---
+---
 
 ## 🛠️ Setup
 
@@ -176,7 +177,7 @@ src/
 
 > 💡 **Tip:** the Arduino IDE normally expects each `.ino` file to live in its own folder matching the sketch name. Since `arduino_code.ino` and `esp32code.ino` sit together in `src/`, open each file directly via **File → Open** (rather than double-clicking from a file browser) so it doesn't try to create a matching folder for you.
 
---
+---
 
 ## 📊 Results
 
@@ -191,7 +192,7 @@ src/
 - SMS alerts landed in real time the moment a hazard was detected.
 - Sensor data stayed visible remotely on ThingSpeak from any smartphone or PC.
 
---
+---
 ## 🖼️ Gallery
 
 | Normal State | Gas Detected | Fire Detected |
@@ -202,7 +203,7 @@ src/
 |:---:|:---:|:---:|
 | ![Connections](images/connections.png) | ![SMS](images/sms-alert.jpg) | ![ThingSpeak](images/ThingSpeak-normal.jpg) |
 
---
+---
 ## 🔮 Future scope
 
 - 💨 Automatic ventilation / fire suppression — exhaust fans, gas valves, sprinklers
@@ -211,7 +212,8 @@ src/
 - 🧪 Multi-sensor fusion (temperature, smoke, humidity, CO/CO₂) to cut false alarms
 - 🏢 Centralized monitoring dashboard for multiple units across a building or facility
 - ☁️ Long-term cloud data storage for trend analysis and reporting
---
+  
+---
 ## 👥 Team
 
 - Akshata Chettiar
@@ -219,7 +221,7 @@ src/
 - Pavitra Boga
 - Anoushka Rajesh
 
---
+---
 
 ## 📜 License
 Academic mini-project — feel free to reference for learning purposes.
