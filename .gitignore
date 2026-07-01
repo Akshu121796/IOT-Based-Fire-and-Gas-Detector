@@ -1,0 +1,25 @@
+# --- Secrets (never commit real credentials) ---
+secrets.h
+
+# --- Arduino IDE / arduino-cli build artifacts ---
+*.hex
+*.elf
+*.bin
+*.eep
+*.map
+build/
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# --- Arduino IDE editor/project cache files ---
+*.orig
+*.bak
+
+# --- OS junk files ---
+.DS_Store
+Thumbs.db
+
+# --- Editor folders ---
+.vscode/
+.idea/
