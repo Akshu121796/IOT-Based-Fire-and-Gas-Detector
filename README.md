@@ -1,5 +1,4 @@
 # 🔥 IoT-Based Fire and Gas Detector
-
 **A hazard doesn't wait for someone to be in the room. Neither should your alarm system.**
 
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
@@ -8,21 +7,24 @@
 ![License](https://img.shields.io/badge/license-academic-lightgrey)
 
 An IoT-enabled safety system that senses gas leaks and fire in real time, sounds a local alarm, fires off an SMS the moment something's wrong, and streams live sensor data to a ThingSpeak cloud dashboard — so you know what's happening even when you're not home.
-
 ---
 
 ## 📑 Table of Contents
 
 - [Why this project](#-why-this-project)
-- [Problem statement](#-problem-statement)
-- [How it works](#-how-it-works)
+- [Problem Statement](#-problem-statement)
+- [Objectives](#-objectives-of-project)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [How It Works](#️-how-it-works)
 - [Hardware & Software](#-hardware--software)
-- [Repository structure](#-repository-structure)
-- [Setup](#-setup)
+- [Repository Structure](#-repository-structure)
+- [Setup](#️-setup)
 - [Results](#-results)
-- [Gallery](#-gallery)
-- [Future scope](#-future-scope)
+- [Gallery](#️-gallery)
+- [Future Scope](#-future-scope)
 - [Team](#-team)
+- [License](#-license)
 
 ---
 
@@ -42,7 +44,6 @@ Gas leaks and fire outbreaks remain among the most preventable causes of propert
 - **Industrial-grade GSM/control-room systems** that do offer remote alerting, but are expensive, complex to install, and built for factories — not homes or small shops.
 
 This creates a clear gap for affordable, connected safety hardware. Specifically:
-
 - ❌ **No remote visibility** — you only find out about a hazard if you're physically present.
 - ❌ **No historical data** — there's no log of gas levels over time, so trends (a slow leak, a recurring spike) go unnoticed.
 - ❌ **High cost of entry** — cloud-connected industrial systems price out individual households and small businesses.
@@ -71,7 +72,8 @@ This creates a clear gap for affordable, connected safety hardware. Specifically
 - ✅ Easy Installation
 
 ---
-**Tech Stack**
+
+## Tech Stack
 Microcontroller:
 - Arduino UNO
 - ESP32
